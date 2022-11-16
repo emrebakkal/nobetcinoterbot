@@ -5,12 +5,6 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 const axios = require('axios');
 
-
-bot.on(':new_chat_members', (ctx) => {
-    console.log(ctx.message.chat.id);
-    ctx.reply('Hello, I am a bot!');
-});
-
 bot.command("start", async (ctx) => {
     await ctx.reply(`Nöbetçi Noter Bot'a Hoşgeldin, [${ctx.from.first_name}](https://t.me/${ctx.from.username})! \n\n` + "Ben, [Bu Kişi](https://t.me/bpercent) tarafından Nöbetçi Noterleri hızlıca bulabilmen için geliştirilmiş bir botum. Bot'un kullanımı hakkında bilgi almak için lütfen /help komutunu kullanın.", {
         parse_mode: "Markdown",
