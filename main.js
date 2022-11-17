@@ -45,7 +45,7 @@ bot.command("start", async (ctx) => {
     } catch {
         console.error("Cannot Found Users JSON File, Creating New JSON Bin..")
         // Herhangi bir kayıtlı veritabanı yok ise, yeni bir JSON dosyası oluşturulur.
-        fs.writeFileSync("./users.json", JSON.stringify("[]", null, 2))
+        fs.writeFileSync("./users.json", JSON.stringify([], null, 2))
         data = require("./users.json")
         // Tekrardan data: any değişkeni yeni oluşturulan JSON dosyası olarak atanır.
     } finally {
